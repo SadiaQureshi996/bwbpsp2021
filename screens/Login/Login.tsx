@@ -39,6 +39,7 @@ export default class LoginScreen extends React.Component<LoginScreenProps, Login
 
   async login(): Promise<void> {
     const user = await getUser(this.state.user);
+  
     if (user) {
       await this.context.setUser(user);
       this.props.navigation.navigate('App');
