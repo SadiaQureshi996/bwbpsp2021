@@ -93,6 +93,9 @@ export async function getUser(user: UserRecord, cached = false): Promise<UserRec
   else if (user == testUser){
     return testUser
   }
+  else {
+    return null
+  }
   
 
   // FOR THOSE WHO ARE INTERESTED IN HOW IT'S ACTUALLY IMPLEMENTED
