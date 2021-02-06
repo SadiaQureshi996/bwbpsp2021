@@ -87,8 +87,13 @@ export async function getUser(user: UserRecord, cached = false): Promise<UserRec
     uname: 'jenhoang',
     graduated: true,
   };
-
-  return testUser;
+  if (user== null){
+    return null;
+  }
+  else if (user == testUser){
+    return testUser
+  }
+  
 
   // FOR THOSE WHO ARE INTERESTED IN HOW IT'S ACTUALLY IMPLEMENTED
   if (cached) {
