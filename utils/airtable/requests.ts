@@ -87,10 +87,10 @@ export async function getUser(user: UserRecord, cached = false): Promise<UserRec
     uname: 'jenhoang',
     graduated: true,
   };
-  if (user== null){
+  if (user === null){
     return null;
   }
-  else if (user == testUser){
+  else if ((user.uname === testUser.uname) && (user.password === testUser.password)){
     return testUser
   }
   else {
